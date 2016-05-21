@@ -1,18 +1,19 @@
 {
-  "name": "parse-server-example",
-  "version": "1.4.0",
-  "description": "An example Parse API server using the parse-server module",
+  "name": "climatic",
+  "version": "1.0.0",
+  "description": "climatic app backend.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ParsePlatform/parse-server-example"
+    "url": "https://github.com/fiznool/climatic-backend"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "~4.11.x",
-    "kerberos": "~0.0.x",
-    "parse": "~1.8.0",
-    "parse-server": "~2.2.2"
+    "express": "^4.13.4",
+    "kerberos": "0.0.21",
+    "parse": "^1.8.5",
+    "parse-dashboard": "^1.0.11",
+    "parse-server": "^2.2.10"
   },
   "scripts": {
     "start": "node index.js"
