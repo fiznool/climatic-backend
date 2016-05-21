@@ -16,12 +16,14 @@ var api = new ParseServer({
 });
 
 var dashboard = new ParseDashboard({
-  apps: [
-    {
-      serverURL, masterKey, appId,
-      appName: 'Climatic'
-    }
-  ]
+  apps: [{
+    serverURL, masterKey, appId,
+    appName: 'Climatic'
+  }],
+  users: [{
+    user: process.env.AUTH_USERNAME,
+    pass: process.env.AUTH_PASSWORD,
+  }]
 });
 
 var app = express();
