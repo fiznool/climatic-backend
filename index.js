@@ -26,6 +26,11 @@ var dashboard = new ParseDashboard({
 
 var app = express();
 
+var env = app.get('env');
+if(env === 'production') {
+  app.set('trust proxy', true);
+}
+
 // Serve the Parse API on the /api URL prefix
 app.use('/api', api);
 
