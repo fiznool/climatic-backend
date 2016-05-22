@@ -5,13 +5,14 @@ var Parse = require('parse/node');
 Parse.initialize('climatic');
 Parse.serverURL = 'https://climatic.herokuapp.com/api';
 
-var saveItem = function(item) {
+var saveItem = function(item, idx) {
   var Post = Parse.Object.extend('Post');
   var props = {
     file: new Parse.File('photo.jpg', { base64: item.picture }),
     title: item.title,
     description: item.description
   };
+  console.log(`Saving item #${idx}`);
   return new Post().save(props);
 };
 
